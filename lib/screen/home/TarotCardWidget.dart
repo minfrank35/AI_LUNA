@@ -1,3 +1,9 @@
+import 'package:ai_fortune_teller/const/AppColors.dart';
+import 'package:ai_fortune_teller/const/FontConst.dart';
+import 'package:ai_fortune_teller/const/ImageConst.dart';
+import 'package:ai_fortune_teller/uikit/comm_text/DetailText.dart';
+import 'package:ai_fortune_teller/uikit/comm_title/H2_title.dart';
+import 'package:ai_fortune_teller/uikit/decoration/CommDecoration.dart';
 import 'package:flutter/material.dart';
 
 class TarotCardWidget extends StatelessWidget {
@@ -7,27 +13,53 @@ class TarotCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 142,
-      decoration: BoxDecoration(
-        color: Colors.transparent, // 투명한 배경
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.5), // 그림자 색상 (불투명 검은색)
-            blurRadius: 16, // 그림자가 퍼지는 정도
-            offset: Offset(0, -4), // 그림자 위치 (아래쪽으로 이동)
-            spreadRadius: 0, // 그림자의 확산 정도
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(16), // 테두리 둥글게 설정
+    return InkWell(
+      onTap: () => {
+        print("안녕")
+      },
+      child: Container(
+        width: double.infinity,
+        height: 142,
+        decoration: CommDecoration.COMM_BOX_DECORATION,
         child: Container(
-          decoration: BoxDecoration(
-            color: Color(0xB3091522), // 진한 배경색 설정
-            borderRadius: BorderRadius.circular(16),
+          padding: EdgeInsets.all(19),
+          child: Row(
+            children: [
+              Container(
+                width: 61,
+                height: 104,
+                margin: EdgeInsets.only(right: 19),
+                child: Image.network(
+                    "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents03.jpg"),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    H2Title(title: "The High Preiestess"),
+                    SizedBox(height: 8),
+                    DetailText(detailText: "ㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅇㅎㅇㅎㅇㅎㅇㅎ"),
+                    Spacer(),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Spacer(),
+                          DetailText(detailText: "자세히보기"),
+                          SizedBox(width: 4),
+                          Icon(
+                            Icons.chevron_right,
+                            color: AppColors.TAB_TEAL_CLICKED,
+                            size: 22,
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
           ),
         ),
       ),

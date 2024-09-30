@@ -1,3 +1,33 @@
 class ImageConst {
-  static const String COMM_BACK_IMAGE = 'assets/background.png';
+  static const String BACK_GROUND = 'assets/background.png';
+  static const String ALARM_LINEAR = 'assets/alarm_linear.png';
+  static const String ALARM_OFF = 'assets/alarm_off.png';
+  static const String ALARM_ON = 'assets/alarm_on.png';
+  static const String ARROW_RIGHT = 'assets/arrow_right.png';
+  static const String BANNER_COUPLE = 'assets/banner_couple.png';
+  static const String BANNER_LUNA = 'assets/banner_luna.png';
+  static const String BANNER_MONEY = 'assets/banner_money.png';
+  static const String CHAT_GRAY = 'assets/chat_gray.png';
+  static const String CHAT_TINT = 'assets/chat_tint.png';
+  static const String COIN_LINEAR = 'assets/coin_linear.png';
+  static const String HEART_LINEAR = 'assets/heart_linear.png';
+  static const String MAIL = 'assets/mail.png';
+  static const String MONEY_LINEAR = 'assets/money_linear.png';
+  static const String MORE_GRAY = 'assets/more_gray.png';
+  static const String MORE_TINT = 'assets/more_tint.png';
+  static const String NOTICE = 'assets/notice.png';
+  static const String PENCIL = 'assets/pencil.png';
+  static const String RAB_BUSINESS_START = 'assets/rab_business_start.png';
+  static const String RAB_COUPLE_2025 = 'assets/rab_couple_2025.png';
+  static const String RAB_LIKE_ME = 'assets/rab_like_me.png';
+  static const String RAB_MARRY_WHEN = 'assets/rab_marry_when.png';
+  static const String RAB_MONEY_2025 = 'assets/rab_money_2025.png';
+  static const String RAB_POPULAR = 'assets/rab_popular.png';
+  static const String RAB_RICH = 'assets/rab_rich.png';
+  static const String RAB_SOLO_ESCAPE = 'assets/rab_solo_escape.png';
+  static const String RAB_TODAY = 'assets/rab_today.png';
+  static const String SETTING = 'assets/setting.png';
+  static const String STAR_LINEAR = 'assets/star_linear.png';
+  static const String TAROT_TINT = 'assets/tarot_tint.png';
+  static const String TAROT_GRAY = 'assets/tarot_gray.png';
 }

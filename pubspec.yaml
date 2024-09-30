@@ -160,3 +160,10 @@ flutter:
         - asset: assets/fonts/figtree_semibolditalic.ttf
           weight: 600
           style: italic
+    - family: GowunDodum
+      fonts:
+        - asset: assets/fonts/gowundodum_regular.ttf
+    - family: GowunBatang
+      fonts:
+        - asset: assets/fonts/gowunbatang_regular.ttf
+

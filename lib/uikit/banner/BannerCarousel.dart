@@ -2,6 +2,30 @@ import 'package:ai_fortune_teller/uikit/banner/BannerItem.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+/**
+ * 사용법
+ * Container(
+    height: 303,
+    child: BannerCarousel(
+    bannerItems: [
+    BannerItem(
+    imagePath: 'assets/banner1.png',
+    bannerText: '배너 1 텍스트',
+    ),
+    BannerItem(
+    imagePath: 'assets/banner2.png',
+    bannerText: '배너 2 텍스트',
+    ),
+    BannerItem(
+    imagePath: 'assets/banner3.png',
+    bannerText: '배너 3 텍스트',
+    ),
+    ],
+    ),
+    ),
+
+ *
+ */
 class BannerCarousel extends StatefulWidget {
   final List<BannerItem> bannerItems;
 

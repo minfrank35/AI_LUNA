@@ -50,7 +50,7 @@ class _HomescreenState extends State<Homescreen> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(ImageConst.COMM_BACK_IMAGE),
+                  image: AssetImage(ImageConst.BACK_GROUND),
                   fit: BoxFit.cover),
             ),
           ),
@@ -71,12 +71,12 @@ class _HomescreenState extends State<Homescreen> {
                 child: Row(children: [
                   Expanded(
                       child: TabBarItem(
-                    imageAsset: HomeTab.TODAY_FORTUNE.selectedImagePath,
+                    imageAsset: HomeTab.TAROT.selectedImagePath,
                     imageAssetUnclicked:
-                        HomeTab.TODAY_FORTUNE.unselectedImagePath,
-                    label: HomeTab.TODAY_FORTUNE.tabBarItemLabel,
+                        HomeTab.TAROT.unselectedImagePath,
+                    label: HomeTab.TAROT.tabBarItemLabel,
                     isActivate:
-                        _currentTabNum == HomeTab.TODAY_FORTUNE.tabLocNum,
+                        _currentTabNum == HomeTab.TAROT.tabLocNum,
                     onTap : () {
                       setState(() {
                         _currentTabNum = 0;
@@ -85,10 +85,10 @@ class _HomescreenState extends State<Homescreen> {
                   )),
                   Expanded(
                       child: TabBarItem(
-                    imageAsset: HomeTab.AR_TAROT.selectedImagePath,
-                    imageAssetUnclicked: HomeTab.AR_TAROT.unselectedImagePath,
-                    label: HomeTab.AR_TAROT.tabBarItemLabel,
-                    isActivate: _currentTabNum == HomeTab.AR_TAROT.tabLocNum,
+                    imageAsset: HomeTab.CHAT.selectedImagePath,
+                    imageAssetUnclicked: HomeTab.CHAT.unselectedImagePath,
+                    label: HomeTab.CHAT.tabBarItemLabel,
+                    isActivate: _currentTabNum == HomeTab.CHAT.tabLocNum,
                     onTap : () {
                       setState(() {
                         _currentTabNum = 1;
@@ -97,10 +97,10 @@ class _HomescreenState extends State<Homescreen> {
                   )),
                   Expanded(
                       child: TabBarItem(
-                    imageAsset: HomeTab.PROFILE.selectedImagePath,
-                    imageAssetUnclicked: HomeTab.PROFILE.unselectedImagePath,
-                    label: HomeTab.PROFILE.tabBarItemLabel,
-                    isActivate: _currentTabNum == HomeTab.PROFILE.tabLocNum,
+                    imageAsset: HomeTab.MORE.selectedImagePath,
+                    imageAssetUnclicked: HomeTab.MORE.unselectedImagePath,
+                    label: HomeTab.MORE.tabBarItemLabel,
+                    isActivate: _currentTabNum == HomeTab.MORE.tabLocNum,
                     onTap : () {
                       setState(() {
                         _currentTabNum = 2;
@@ -149,8 +149,12 @@ class _TabBarItemState extends State<TabBarItem> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // 활성화 상태에 따라 다른 이미지 표시
-          Image.asset(
-              widget.isActivate ? widget.imageAsset : widget.imageAssetUnclicked),
+          Container(
+            height: 24,
+            width: 24,
+            child: Image.asset(
+                widget.isActivate ? widget.imageAsset : widget.imageAssetUnclicked),
+          ),
           SizedBox(height: 8),
           Text(
             widget.label, // widget. 으로 접근

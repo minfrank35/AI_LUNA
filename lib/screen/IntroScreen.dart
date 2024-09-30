@@ -71,7 +71,7 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(ImageConst.COMM_BACK_IMAGE), // 배경 이미지
+          image: AssetImage(ImageConst.BACK_GROUND), // 배경 이미지
         ),
       ),
       child: Scaffold(
