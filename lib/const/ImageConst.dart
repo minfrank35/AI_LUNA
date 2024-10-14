@@ -30,4 +30,5 @@ class ImageConst {
   static const String STAR_LINEAR = 'assets/star_linear.png';
   static const String TAROT_TINT = 'assets/tarot_tint.png';
   static const String TAROT_GRAY = 'assets/tarot_gray.png';
+  static const String STAR_YELLOW = 'assets/star_yellow.png';
 }

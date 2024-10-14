@@ -1,6 +1,7 @@
 
 import 'package:ai_fortune_teller/screen/IntroScreen.dart';
 import 'package:ai_fortune_teller/screen/home/HomeScreen.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // 시스템 UI 오버레이 제어를 위한 패키지
 import 'package:audioplayers/audioplayers.dart';
@@ -17,8 +18,15 @@ Future<void> main() async {
   // final player = AudioPlayer();
   // await player.play(AssetSource("mp3/background.mp3"));
 
-
   runApp(const MyApp());
+
+  // runApp(DevicePreview(
+  //   enabled: true,
+  //   tools: const [
+  //     ...DevicePreview.defaultTools,
+  //   ],
+  //   builder: (context) => const MyApp(),
+  // ));
 }
 
 class MyApp extends StatelessWidget {
@@ -27,6 +35,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // useInheritedMediaQuery: true,
+      // locale: DevicePreview.locale(context),
+      // builder: DevicePreviWew.appBuilder,
       title: 'Intro to Home Demo',
       theme : ThemeData(fontFamily: 'figtree'),
       initialRoute: '/',

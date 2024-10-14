@@ -2,10 +2,9 @@ import 'package:ai_fortune_teller/const/AppColors.dart';
 import 'package:ai_fortune_teller/const/HomeTabBarConst.dart';
 import 'package:ai_fortune_teller/const/ImageConst.dart';
 import 'package:ai_fortune_teller/screen/IntroScreen.dart';
-import 'package:ai_fortune_teller/screen/home/TodayFortuneTab.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'tarot_tab.dart';
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -30,7 +29,7 @@ class _HomescreenState extends State<Homescreen> {
     switch (_currentTabNum) {
       case 0:
         {
-          _tabItem = TodayfortuneTab();
+          _tabItem = Tarot();
         }
       case 1:
         {
@@ -38,10 +37,10 @@ class _HomescreenState extends State<Homescreen> {
         }
       case 2:
         {
-          _tabItem = TodayfortuneTab();
+          _tabItem = Tarot();
         }
       default :
-        _tabItem = TodayfortuneTab();
+        _tabItem = Tarot();
     }
 
     return Material(
